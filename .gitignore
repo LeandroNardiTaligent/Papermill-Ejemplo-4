@@ -8,7 +8,6 @@
 /output
 main.ipynb
 modelo_output.ipynb
-prediccion_julia.ipynb
 prediccion_julia_output.ipynb
 preprocesamiento_output.ipynb
 validacion_datos_java_output.ipynb
