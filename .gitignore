@@ -6,7 +6,6 @@
 .ipynb_checkpoints
 /julia_venv
 /output
-main.ipynb
 modelo_output.ipynb
 prediccion_julia_output.ipynb
 preprocesamiento_output.ipynb
