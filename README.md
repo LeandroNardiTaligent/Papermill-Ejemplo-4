@@ -1,4 +1,4 @@
-# Papermill Ejemplo 1
+# Papermill Ejemplo 4
 
 <img src="https://th.bing.com/th/id/R.6920b7a1d49c34ccb3ed8e8c66fa89d5?rik=IsdEqlRjKLbOVQ&pid=ImgRaw&r=0" width="500">
 
@@ -38,16 +38,17 @@ Para ejecutar este proyecto se necesita tener instalado Python 3.6 o superior y 
 
 Se recomienda usar un ambiente virtual para instalar las librerías y evitar conflictos con otras versiones. Se puede crear un ambiente virtual **(para Windows)** usando los comandos:
 
+Crea un ambiente virtual llamado venv
 ```bash
-# Crea un ambiente virtual llamado venv
-$ python -m venv venv
-
-# Activa el ambiente virtual
-$ venv/scripts/activate
-
-# Instala las librerías y las actualiza si es necesario
-$ pip install -r requirements.txt --upgrade
-
+python -m venv venv
+```
+Activa el ambiente virtual
+```bash
+venv/scripts/activate
+```
+Instala las librerías y las actualiza si es necesario
+```bash
+pip install -r requirements.txt --upgrade
 ```
 
 En caso de usar Linux o Mac, los comandos cambian un poco su sintaxis. Se recomenda revisar como crear ambientes virtuales en dichos OS si se desea ejecutar el código en alguna distribución de Linux o Mac.
@@ -55,9 +56,7 @@ En caso de usar Linux o Mac, los comandos cambian un poco su sintaxis. Se recome
 Para instalar el proyecto desde el repositorio que lo contiene como submódulo, se puede usar el comando git clone con la opción --recurse-submodules. Por ejemplo, se podría usar este comando:
 
 ```bash
-# Clona el repositorio principal y sus submódulos
-$ git clone --recurse-submodules https://github.com/proyecto-principal.git
-
+git clone --recurse-submodules https://github.com/LeandroNardiTaligent/Papermill-Ejemplos
 ```
 
 Adicional a eso, se necesita tener instalado Java y Julia para correr las notebooks asociadas a esos lenguajes.
