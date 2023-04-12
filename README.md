@@ -12,13 +12,13 @@
 
 - [Descripción](#descripción)
 - [Instalación](#instalación)
-- [Uso](#uso)
 - [Notebook Java](#notebook-java)
   - [IJava](#ijava)
 - [Notebook Julia](#notebook-julia)
   - [Crear un ambiente virtual en Julia](#crear-un-ambiente-virtual-en-julia)
   - [Instalar dependencias en el ambiente virtual](#instalar-dependencias-en-el-ambiente-virtual)
   - [Activación de dependencias de ambiente virtual](#activación-de-dependencias-de-ambiente-virtual)
+- [Uso](#uso)
 - [Contribución](#contribución)
 
 ## Descripción
