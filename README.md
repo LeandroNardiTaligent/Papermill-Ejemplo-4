@@ -13,6 +13,12 @@
 - [Descripción](#descripción)
 - [Instalación](#instalación)
 - [Uso](#uso)
+- [Notebook Java](#notebook-java)
+  - [IJava](#ijava)
+- [Notebook Julia](#notebook-julia)
+  - [Crear un ambiente virtual en Julia](#crear-un-ambiente-virtual-en-julia)
+  - [Instalar dependencias en el ambiente virtual](#instalar-dependencias-en-el-ambiente-virtual)
+  - [Activación de dependencias de ambiente virtual](#activación-de-dependencias-de-ambiente-virtual)
 - [Contribución](#contribución)
 
 ## Descripción
@@ -71,9 +77,9 @@ Para eso, hay que descargarse el openJDK de https://openjdk.org/. Para este ejem
 Los pasos de instalación son los siguientes:
 
 1. Descarga OpenJDK desde el sitio oficial: https://jdk.java.net/.
-2. Extrae el archivo zip descargado en una carpeta accesible y segura en tu sistema 1.
-3. Agrega la carpeta bin de la instalación de OpenJDK a la variable de entorno PATH 2.
-4. Crea la variable de entorno JAVA_HOME y establece su valor a la ruta donde se descomprimió el JDK (opcional)
+2. Extrae el archivo zip descargado en una carpeta accesible y segura en tu sistema.
+3. Agrega la carpeta bin de la instalación de OpenJDK a la variable de entorno PATH.
+4. Crea la variable de entorno JAVA_HOME y establece su valor a la ruta donde se descomprimió el JDK (opcional).
 5. Abre una consola y ejecuta el comando `java --version` para confirmar que la instalación ha quedado correcta.
 
 Cuando ejecute el comando, debería visualizar un print similar en consola:
@@ -100,7 +106,7 @@ Al igual que con Java, lo primero que hay que hacer es instalar Julia. Los pasos
 
 
 Abre tu navegador web y ve al sitio oficial de Julia en .
-1. Descargar la versión de Julia que deseas instalar en el sitio oficial de Julia (https://julialang.org/downloads/).Recomendamos descargar la versión más reciente estable.
+1. Descargar la versión de Julia que deseas instalar en el sitio oficial de Julia (https://julialang.org/downloads/). Recomendamos descargar la versión más reciente estable.
 2. Ejecuta el archivo de instalación descargado de Julia.
 3. En en instalador, seleccionar la opción `Add to Path`. De lo contrario, habrá que anadir manualmente a Julia como variable de entorno en windows, como se hizo con openJDK.
 4. Hacer clic en "Instalar" para comenzar la instalación de Julia en tu sistema.
@@ -126,6 +132,7 @@ Ahora estás dentro de tu nuevo ambiente virtual y puedes instalar paquetes y de
 activate myenv
 ```
 Si uno no se encuentra en la ruta, Julia creará un ambiente nuevo distinto al anterior.
+
 2. Ejecuta el siguiente comando para instalar una dependencia en el ambiente virtual de Julia (reemplaza "NOMBRE_DEL_PAQUETE" con el nombre del paquete que deseas instalar):
 ```bash
 add NOMBRE_DEL_PAQUETE
@@ -143,8 +150,8 @@ Para esta notebook, los paquetes utilizados fueron:
 
 ### Activación de Dependencias de ambiente virtual
 
-Una vez hecho esto, hay que decirle a Julia que dependencias usar. Para eso, hay que modificar el archivo kernel.json de la siguiente manera:
-```bash
+Una vez hecho esto, hay que decirle a Julia que dependencias usar. Para eso, hay que modificar el archivo `kernel.json` de la siguiente manera:
+```json
 {
   "display_name": "Julia 1.8.5",
   "argv": [
@@ -160,7 +167,7 @@ Una vez hecho esto, hay que decirle a Julia que dependencias usar. Para eso, hay
   "interrupt_mode": "message"
 }
 ```
-En `--project=`, hay que agregar la ruta donde se creó el ambiente virtual, junto con el archivo `Project.toml`. El archivo `kernel.json`, se encuentra en la carpeta julia-1.8. LA ruta de la misma la proporciona la shell de Julia cuando se instala IJulia en el ambiente principal.
+En `--project=`, hay que agregar la ruta donde se creó el ambiente virtual, junto con el archivo `Project.toml`. El archivo `kernel.json`, se encuentra en la carpeta julia-1.8. La ruta de la misma la proporciona la shell de Julia cuando se instala IJulia en el ambiente principal.
 Luego, la ruta donde se creó IJulia, puede moverse a cualquier lugar y colocarla en la carpera del proyecto, por ejemplo.
 
 ## Uso
